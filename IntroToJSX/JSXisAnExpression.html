@@ -16,16 +16,29 @@
     <script type="text/babel">
 
         const  user = {
-            firstName: 'Reda',
-            lastName: 'Hammada'
+           
+            firstName: "",
+            lastName: ""
         };
 
-        function fullName(user){
 
-            return user.firstName + " " + user.lastName;
+        function greet(user){
+
+          if(user){
+              return <h1>Hello, {user.firstName}  {user.lastName}</h1>
+          }
+
+          else {
+
+            if(Object.keys(user).length ===0){
+
+            return <h1>Hello Stranger</h1>;
+
+            }
+          }
         }
 
-        const element = <p>Hello, {fullName(user)}</p>;
+        const element = greet(user);
         ReactDOM.render(element,document.getElementById('demo'));
     </script>
     
