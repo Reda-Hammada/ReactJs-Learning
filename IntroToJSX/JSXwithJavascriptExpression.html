@@ -10,16 +10,24 @@
     <title>Document</title>
 </head>
 <body>
+        <div id="demo">
 
-    <div id="demo">
-
-    </div>
+        </div>
     <script type="text/babel">
         
-        const name = "reda";
-        const element = <h1>Hello, {name}</h1>;
-        ReactDOM.render(element,document.getElementById("demo") );
-   
+        const  user = {
+            firstName: 'Reda',
+            lastName: 'Hammada'
+        };
+
+        function fullName(user){
+
+            return user.firstName + " " + user.lastName;
+        }
+
+        const element = <p>Hello, {fullName(user)}</p>;
+        ReactDOM.render(element,document.getElementById('demo'));
     </script>
+    
 </body>
 </html>
