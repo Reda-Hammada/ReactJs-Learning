@@ -14,14 +14,15 @@
 
         </div>
     <script type="text/babel">
-        
+        const date = new Date();
+        const year = date.getFullYear();
         ReactDOM.render(
             <div>
                 <p>
                     Created By <a target="_blank" href="https://github.com/Reda-Hammada">Reda Hammada</a>
                 </p>
                 <p>
-                    Copyrights 2022
+                    Copyrights {year}
                 </p>
             </div>
             ,document.getElementById('react-app')
