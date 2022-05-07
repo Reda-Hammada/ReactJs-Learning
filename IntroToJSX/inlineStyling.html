@@ -16,18 +16,20 @@
         </div>
     <script type="text/babel">
 
-                ReactDOM.render(
+            const costumStyle = {
+                color: "red",
+                fontSize: "30px"
+            }
 
-                    <div className="container">
+            ReactDOM.render(
 
-                        <img src="./logo512.png"/>
-                        <img src="./logo512.png"/>
-                        <img src="./logo512.png"/>
+                <div>
+                    <p style={costumStyle}>Inline Style</p>
+                </div>
+                ,document.getElementById('demo')
 
 
-                    </div>
-                    ,document.getElementById('demo')
-                )
+            );
     </script>
     
 </body>
