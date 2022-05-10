@@ -25,17 +25,16 @@
         function greet(user){
 
           if(user){
+
               return <h1>Hello, {user.firstName}  {user.lastName}</h1>
           }
 
-          else {
+        
 
-            if(Object.keys(user).length ===0){
+            return <h1>Hello, Stranger</h1>;
 
-            return <h1>Hello Stranger</h1>;
-
-            }
-          }
+        
+        
         }
 
         const element = greet(user);
