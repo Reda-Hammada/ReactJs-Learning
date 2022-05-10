@@ -1,0 +1,19 @@
+.heading { 
+
+    color: #fd0909;
+}
+
+.heading2 {
+
+    color:blue;
+}
+
+.container {
+
+    display: flex;
+}
+
+.container img {
+
+    max-width: 100px;
+}
