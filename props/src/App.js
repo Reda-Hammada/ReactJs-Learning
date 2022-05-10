@@ -2,7 +2,14 @@ import Contact from "./Contact.jsx";
 import person1 from "./images/person1.jpeg";
 import person2 from "./images/person2.jpeg"
 function App() {
+
+
+ 
+
   return (
+
+
+    
     <div className="App">
 
     <Contact  
