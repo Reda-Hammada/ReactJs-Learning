@@ -14,7 +14,7 @@ function App() {
 
     <Contact  
     
-      name="Reda"
+      name = "reda"
       img = {person1}
       email="example1@mail.com"
 
@@ -22,10 +22,10 @@ function App() {
 
       />
        <Contact  
-    
-          name="Ali"
-          img = {person2}
-          email="example2@mail.com"
+         
+         name = "Kate"
+         img = {person2}
+         email="example2@mail.com"
 
 
 

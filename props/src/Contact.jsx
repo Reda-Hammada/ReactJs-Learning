@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const style = {
   width: "200px",
   height: "130px"
 };
 
-export default function Contact(props) {
+const Contact = (props) => {
+
+  
+  
   return (
 
-
+   
     <div>
 
       <h1>{props.name}</h1>
@@ -19,3 +23,13 @@ export default function Contact(props) {
     
   )
 }
+
+Contact.defaultProps = {
+  name : "Marc"
+}
+
+Contact.propTypes = {
+
+  name: PropTypes.array.isRequired
+}
+export default Contact;
