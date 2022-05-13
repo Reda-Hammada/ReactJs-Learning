@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Heading  from './components/Heading'; 
 import Greet from './components/Greet';
-import Classcomponent from "../../componentsapp/src/components/Classcomponent.jsx";
+import Propswithclass from './components/Propswithclass';
 
 function App() {
   return (
@@ -10,8 +10,10 @@ function App() {
 
       
         <Heading />
-        <Classcomponent />
         <Greet />
+
+        <Propswithclass name="Reda" email="example@gmail.com" phone="0601729302"/>
+
 
 
 
