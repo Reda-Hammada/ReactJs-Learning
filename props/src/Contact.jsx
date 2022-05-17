@@ -11,6 +11,9 @@ export default function Contact(props) {
       <p>{props.email}</p>
 
     </div>
+
     
   )
+
+
 }
