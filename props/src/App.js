@@ -2,12 +2,20 @@ import Contact from "./Contact.jsx";
 import person1 from "./images/person1.jpeg";
 import person2 from "./images/person2.jpeg"
 function App() {
+
+
+ 
+
   return (
+
+
+    
     <div className="App">
+
 
     <Contact  
     
-      name="Reda"
+      name = "reda"
       img = {person1}
       email="example1@mail.com"
 
@@ -15,10 +23,10 @@ function App() {
 
       />
        <Contact  
-    
-          name="Ali"
-          img = {person2}
-          email="example2@mail.com"
+         
+         name = "Kate"
+         img = {person2}
+         email="example2@mail.com"
 
 
 
