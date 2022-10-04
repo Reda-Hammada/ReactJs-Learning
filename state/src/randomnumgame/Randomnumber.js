@@ -1,15 +1,20 @@
 import { element } from "prop-types";
 import { Component } from "react";
+import Button from './Button';
 
 class Randomnumber extends Component { 
 
   constructor(props){
     super(props);
     this.state = {
-      Number :7,
+      Number :0,
 
     };
-  this.handleClick();
+
+
+     this.handleClick = this.handleClick.bind(this);
+     this.button = this.button.bind(this);
+     this.paragraph = this.paragraph.bind(this);
 
   }
 
@@ -22,24 +27,34 @@ class Randomnumber extends Component {
      
     }
     
+     button(){
+
+      return <div><button onClick={this.handleClick}>Click me</button></div>
+    }
+
+    paragraph(){
+
+      return <div><p>You Winn !!</p></div>
+
+    }
     
   render () {
- 
+    
+   
+
     if(this.state.Number != 7){
+      var  element =  this.button();
+    }
+    else {
 
-      let  element =  '<button onClick = handleClick()>Click me</button>';
-      // document.getElementById('button_div').innerHTML = element;
-    }else {
-
-      let element = `you Win !!`;
+      var element = this.paragraph();
     }
 
     return (
         <div>
           <h1>Randomnumber</h1>
             <h2>{this.state.Number}</h2>
-            <p>{element}</p>
-            {/* <div id='button_div'></div> */}
+            <div>{element}</div>
         </div>
 
 
