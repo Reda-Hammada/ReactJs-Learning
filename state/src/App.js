@@ -1,13 +1,13 @@
-import Header from './components/Header.js';
-import Contacts from './components/Contacts';
+import logo from './logo.svg';
+import './App.css';
+import Game from './Game/Game';
+import Randomnumber from './randomnumgame/Randomnumber';
+
 function App() {
-  
   return (
     <div className="App">
-        <Header />
-        <Contacts />
-
-
+        {/* <Game /> */}
+        <Randomnumber />
     </div>
   );
 }
