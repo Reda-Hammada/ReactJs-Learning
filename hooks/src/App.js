@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Toggle from './hooks/Toggle';
 import Count from './hooks/Count';
 
 function App() {
   return (
-    <Count />
+    <div>
+        <Count />
+        <Toggle />
+    </div>
         
   );
 }
