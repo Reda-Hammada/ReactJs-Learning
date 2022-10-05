@@ -1,6 +1,4 @@
-import { element } from "prop-types";
 import { Component } from "react";
-import Button from './Button';
 
 class Randomnumber extends Component { 
 
@@ -18,7 +16,7 @@ class Randomnumber extends Component {
 
   }
 
-  handleClick (e){
+  handleClick (){
 
     let rand =  Math.floor(Math.random() * 10)+1;
     this.setState({Number:rand});
@@ -34,7 +32,7 @@ class Randomnumber extends Component {
 
     paragraph(){
 
-      return <div><p>You Winn !!</p></div>
+      return <div><p><strong>You Winn !!</strong></p></div>
 
     }
     
