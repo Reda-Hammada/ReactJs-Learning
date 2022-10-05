@@ -1,18 +1,26 @@
-import React, { useState } from "react"
+import React, { useState } from "react" 
 
 export default Formhooks;
 
 function Formhooks (){
-    let [state,setState] = useState("");
+
+    const [email,setEmail] = useState("");
 
     return(
         <div>
-            <input type='text'
+            <input type='email'
+                    value={email}
                     onChange = {(e)=>{
-
-                        setState(state =  e.target.value)
+                
+                        setEmail(e.target.value)
                     }} />
-                    <p>{state}</p>
+                    <p>{email}</p>
+
+            <button onClick={()=>{
+
+                    setEmail("")
+
+            }}>reset</button>
         </div>
     )
 }

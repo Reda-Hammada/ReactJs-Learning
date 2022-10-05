@@ -3,6 +3,7 @@ import './App.css';
 import Toggle from './hooks/Toggle';
 import Count from './hooks/Count';
 import Formhooks from './hooks/Formhooks';
+import Useeffect from './hooks/Useeffect';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Count />
         <Toggle />
         <Formhooks />
+        <Useeffect />
     </div>
         
   );
