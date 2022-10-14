@@ -1,24 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+
 function Form () {
 
-    const [todo, setTodo] = useState([]);
+    const [todo, setTodo] = useState("");
+    
+    const addTodo = () =>{
+        let randomNumber = Math.floor((Math.random() *1000000000)+1);
+        let randomStrinfigy = String(randomNumber);
+        let task  =  todo;
+        localStorage.setItem(randomStrinfigy,task);
 
+    }
+
+    const reset = () => {
+
+        setTodo("");
+    }
+
+    const getAllTasks = () => {
+        
+         const tasks = [];
+
+        for(let i=0; i <localStorage.length; i++  ){
+
+            tasks[i]=localStorage.getItem(localStorage.key(i));
+        }
+
+        return tasks;
+    }
+
+  
     return(
 
         <div>
-            <form>
+            <form
+                onSubmit={event=>{
+                    event.preventDefault();
+                    addTodo();
+                    reset();
+                }}
+                
+                >
                 <div>
-                    <input type='text' required onChange={
-                        (e)=>{
-                            setTodo(e.target.value)
-                        }
-                    } />
+                    <input value={todo} type='text' 
+                           required
+                           onChange={e=>{
+                            setTodo(e.target.value);
+                           }}
+                     />
                 </div>
                 <div>
                     <input type = 'submit' />
                 </div>
+                <p>{}</p>
             </form>
-            <p>{todo}</p>
         </div>
 
     );
