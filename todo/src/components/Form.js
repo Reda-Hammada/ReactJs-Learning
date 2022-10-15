@@ -1,8 +1,9 @@
-import React, { useState,useEffect } from 'react';
+import React,{ useState,useEffect } from 'react';
 
 function Form () {
 
     const [todo, setTodo] = useState("");
+    const [tasks, setTasks] = useState([]);
     
     const addTodo = () =>{
         let randomNumber = Math.floor((Math.random() *1000000000)+1);
@@ -17,24 +18,40 @@ function Form () {
         setTodo("");
     }
 
-    const getAllTasks = () => {
-        
-         const tasks = [];
 
-        for(let i=0; i <localStorage.length; i++  ){
 
-            tasks[i]=localStorage.getItem(localStorage.key(i));
-        }
+     useEffect(() =>{
 
-        return tasks;
-    }
+              function  getTasks(){
+                const tasks = [];
+                
+                    for(let i=0; i <localStorage.length; i++  ){
+
+                        tasks[i]=localStorage.getItem(localStorage.key(i));
+                    }
+
+
+                    setTasks(tasks)
+
+                     
+                        return tasks;
+                }
+
+                getTasks();
+
+            }, [])  
+
+            
+
+
 
   
+    
     return(
-
         <div>
             <form
                 onSubmit={event=>{
+
                     event.preventDefault();
                     addTodo();
                     reset();
@@ -52,10 +69,21 @@ function Form () {
                 <div>
                     <input type = 'submit' />
                 </div>
-                <p>{}</p>
+                
             </form>
-        </div>
+            <div>
+                <ul>
+                    {tasks.map(task =>
 
-    );
-}
+                    <li>{task}</li>  )
+                    
+                }
+                    
+                </ul>
+            </div> 
+        </div>
+    )
+
+            }
+
 export default Form;
