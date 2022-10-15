@@ -1,53 +1,45 @@
 import React,{ useState,useEffect } from 'react';
 
 function Form () {
-
+    
     const [todo, setTodo] = useState("");
     const [tasks, setTasks] = useState([]);
     
     const addTodo = () =>{
+
         let randomNumber = Math.floor((Math.random() *1000000000)+1);
         let randomStrinfigy = String(randomNumber);
         let task  =  todo;
         localStorage.setItem(randomStrinfigy,task);
-
     }
 
     const reset = () => {
-
+        
         setTodo("");
     }
 
-
-
      useEffect(() =>{
 
-              function  getTasks(){
+        function  getTasks(){
+
                 const tasks = [];
                 
-                    for(let i=0; i <localStorage.length; i++  ){
+                    for(let i=0; i<localStorage.length; i++){
 
                         tasks[i]=localStorage.getItem(localStorage.key(i));
                     }
 
 
                     setTasks(tasks)
-
-                     
-                        return tasks;
+     
                 }
 
                 getTasks();
 
-            }, [])  
+            },[todo])  
 
-            
-
-
-
-  
-    
     return(
+        
         <div>
             <form
                 onSubmit={event=>{
@@ -84,6 +76,6 @@ function Form () {
         </div>
     )
 
-            }
+}
 
 export default Form;
