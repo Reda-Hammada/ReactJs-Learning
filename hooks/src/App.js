@@ -6,12 +6,15 @@ import Useeffect from './hooks/Useeffect';
 import Hookobject from './hooks/Hookobject';
 import Hookarray from './hooks/Hookarray';
 import Dataeffect from './hooks/Dataeffect';
+import Fetchwithid from './hooks/Fetchwithid';
 
 function App() {
 
   return (
 
     <div>
+
+        <Fetchwithid />
 
         {/* <Dataeffect />
         <Count />

@@ -1,15 +1,23 @@
 import React from 'react'
 import {useEffect,useState}  from 'react'
 import axios from 'axios'
+
+
 function Fetchwithid() {
-    const[id,  setId] = useState(1)
-    const [post, setPost] = setPost([]);
+    const[id,  setId] = useState()
+    const[buttonClick, setIdFromButtonClick] = useState(1)
+    const [posts, setPost] = useState({});
+    
+    const handleClick = () => {
+
+        setIdFromButtonClick(id)
+    }
     
 
     useEffect(()=>{
 
         axios.get(
-            `https://jsonplaceholdre.typicode.com/posts/${id}`)
+            `https://jsonplaceholder.typicode.com/posts/${buttonClick}`)
         .then(res => {
 
             setPost(res.data)
@@ -18,20 +26,25 @@ function Fetchwithid() {
         .catch(err=>{
             console.log(err)
         })
-    },[])
+    },[buttonClick])
+
+
 
   return (
 
     <div>
        <input type='text'
-       value={id}  
-       onChange ={
+       value={id}
+       onChange={
         e=>setId(e.target.value)
-        } />
+       }  
+        />
+       <button onClick={ 
+            handleClick}>
+            Click me!
+        </button>
         <div>
-            {post.map(onepost =>(
-                <li key={onepost.id}>{onepost.title}</li>
-            ))}
+           {posts.title}
         </div>
     </div>
   )
