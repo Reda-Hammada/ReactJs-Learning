@@ -3,10 +3,13 @@ import React, {useState} from 'react';
 const Hookobject = () => {
     
     const [name, setName] = useState({firstName:"", lastName: ""});
+
     return(
 
         <div>
+
             <form>
+                
                 <input type='text' 
                        value={name.firstName}
                        onChange={(e)=>{
@@ -28,7 +31,9 @@ const Hookobject = () => {
                 <h2>Your first name is - {name.firstName}</h2>
                 <h2>Your last name is  - {name.lastName}</h2>
                 <p>{JSON.stringify(name)}</p>
+
             </form>
+
         </div>
     )
 }

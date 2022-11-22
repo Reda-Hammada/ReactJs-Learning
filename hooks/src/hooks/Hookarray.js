@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 
 export default function Hookarray() {
 
@@ -14,9 +14,11 @@ export default function Hookarray() {
 
         console.log(items);
     }
+
   return (
 
     <div>
+    
         <button onClick={addItem}>Add Item</button>
 
         <ul>
