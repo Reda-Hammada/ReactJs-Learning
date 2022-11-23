@@ -4,6 +4,7 @@ import axios from 'axios'
 
 
 function Fetchwithid() {
+
     const[id,  setId] = useState()
     const[buttonClick, setIdFromButtonClick] = useState(1)
     const [posts, setPost] = useState({});
@@ -17,9 +18,12 @@ function Fetchwithid() {
     useEffect(()=>{
 
         axios.get(
-            `https://jsonplaceholder.typicode.com/posts/${buttonClick}`)
+            `https://jsonplaceholder.typicode.com/posts/${buttonClick}`
+            )
+
         .then(res => {
 
+            console.log(res.data)
             setPost(res.data)
         })
 
