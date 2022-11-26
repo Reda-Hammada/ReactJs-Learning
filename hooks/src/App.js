@@ -7,6 +7,7 @@ import Hookobject from './hooks/Hookobject';
 import Hookarray from './hooks/Hookarray';
 import Dataeffect from './hooks/Dataeffect';
 import Fetchwithid from './hooks/Fetchwithid';
+import Refhook1 from './hooks/useRef/Refhook1';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
 
     <div>
 
-        <Fetchwithid />
+        {/* <Fetchwithid /> */}
 
         {/* <Dataeffect />
         <Count />
@@ -23,7 +24,7 @@ function App() {
         <Useeffect />
         <Hookobject />
         <Hookarray /> */}
-
+        <Refhook1 />
     </div>
         
   );
