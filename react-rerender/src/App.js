@@ -3,6 +3,7 @@ import './App.css';
 import UseState from './components/UseState';
 import UseReducer from './components/UseReducer/UseReducer';
 import ObjectUseState from './components/ObjectUseState';
+import ArrayUseState from './components/ArrayUseState';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <UseState />
         <UseReducer />
         <ObjectUseState />
+        <ArrayUseState />
       </header>
     </div>
   );
