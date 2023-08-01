@@ -4,6 +4,8 @@ import UseState from './components/UseState';
 import UseReducer from './components/UseReducer/UseReducer';
 import ObjectUseState from './components/ObjectUseState';
 import ArrayUseState from './components/ArrayUseState';
+import Parent from './components/Parent-Child/Parent';
+import ParentOne from './components/optimization/ReactMemo/ParentOne';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <UseReducer />
         <ObjectUseState />
         <ArrayUseState />
+        <Parent />
+        <ParentOne />
       </header>
     </div>
   );
