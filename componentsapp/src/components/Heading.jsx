@@ -11,7 +11,6 @@ function Heading(){
                     <li>contact</li>
                     <li>About</li>
                 </ul>
-
             </nav>
            
         </div>
