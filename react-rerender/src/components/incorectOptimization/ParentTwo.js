@@ -5,6 +5,7 @@ import {MemoizedChildTwo} from './ChildTwo'
  * incorrect way of using react memo
  * when the child component has HTML elements or other react component and not merely text node it will re-render
  * when the other count state changes and not just the props
+ * keep in mind if passing objects or functions as props to the child component the React memo can't optimize the re-render since afer every render a new reference is created for the object and function created in parent and passed to the child
  */
 const ParentTwo = () => {
 
