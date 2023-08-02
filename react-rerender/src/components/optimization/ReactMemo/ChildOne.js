@@ -4,6 +4,7 @@ import React from 'react'
  * React.memo
  * Whne a parent component renders a child component migh un-necessarily render
  * to optimize his, we can pass the component as a props or use the React.memo and pass in the child component
+ * this should be used when the props change 
  * 
  */
 const ChildOne = () => {

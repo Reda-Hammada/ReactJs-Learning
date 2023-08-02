@@ -1,6 +1,12 @@
 import React,{useState} from 'react'
 import {MemoizedChildOne} from './ChildOne';
 
+/**
+ * same element reference
+ * When a parent component's state changes and causes an uneccessary re-render for its childern, thus a performance issue 
+ * 
+ * 
+ */
 const ParentOne = () => {
 
   const [count, setCount] = useState(0);
