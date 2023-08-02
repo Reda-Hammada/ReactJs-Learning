@@ -6,6 +6,7 @@ import ObjectUseState from './components/ObjectUseState';
 import ArrayUseState from './components/ArrayUseState';
 import Parent from './components/Parent-Child/Parent';
 import ParentOne from './components/optimization/ReactMemo/ParentOne';
+import ParentTwo from './components/incorectOptimization/ParentTwo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <ArrayUseState />
         <Parent />
         <ParentOne />
+        <ParentTwo />
       </header>
     </div>
   );
