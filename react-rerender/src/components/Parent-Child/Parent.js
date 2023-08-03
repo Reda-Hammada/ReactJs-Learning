@@ -11,9 +11,10 @@ const Parent = () => {
         languages.push('Java')
         setLanguages(languages)
     }
-
     console.log('Parent render')
+
   return (
+
     <div>
         <h1>Parent-Child Render</h1>
 
@@ -22,6 +23,7 @@ const Parent = () => {
         </button>
         <Child languages = {languages} />
     </div>
+    
   )
 }
 
