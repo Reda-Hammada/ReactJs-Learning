@@ -8,6 +8,7 @@ import Parent from './components/Parent-Child/Parent';
 import ParentOne from './components/optimization/ReactMemo/ParentOne';
 import ParentTwo from './components/incorectOptimization/ParentTwo';
 import MemoParent from './components/optimization/useMemo/MemoParent';
+import CallbackParent from './components/optimization/useCallBack/CallbackParent';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         <ParentOne />
         <ParentTwo />
         <MemoParent />
+        <CallbackParent />
       </header>
     </div>
   );
