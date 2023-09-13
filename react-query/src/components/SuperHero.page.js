@@ -6,8 +6,7 @@ import { useGetSuperHeroes } from '../API/superheroes/queries'
 const SuperHero = () => {
   const {data,isLoading,isError} = useGetSuperHeroes();
   const superheroes = useMemo(() =>{ return data ?? []}, [data]);
-  console.log(data)
-  console.log(superheroes);
+
 
   if(isLoading){
     return <h2>Loading...</h2>
