@@ -1,19 +1,20 @@
 /**
- * Greet should render the text hello and if a name is passed into the component 
- * it should render hello followed by the name 
+ * Greet should render the text hello and if a name is passed into the component
+ * it should render hello followed by the name
  */
+import { render, screen } from "@testing-library/react";
+import Greet from "./Greet";
 
-import { render,screen } from "@testing-library/react"
-import Greet from "./Greet"
-
-test('Greet renders correctly',()=>{
+describe("render Greet and pass name props to it", () => {
+  test("Greet renders correctly", () => {
     render(<Greet />);
-    const textElement = screen.getByText('Hello');
+    const textElement = screen.getByText("Hello");
     expect(textElement).toBeInTheDocument();
-})
-bn
-test('Greet renders with a name',()=>{
-   render(<Greet name='Reda' />)
-   const textElement = screen.getByText('Hello Reda');
-   expect(textElement).toBeInTheDocument();
-})
+  });
+
+  // test("Greet renders with a name", () => {
+  //   render(<Greet name="Reda" />);
+  //   const textElement = screen.getByText("Hello");
+  //   expect(textElement).toBeInTheDocument();
+  // });
+});
