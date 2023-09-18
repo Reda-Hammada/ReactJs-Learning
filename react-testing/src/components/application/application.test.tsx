@@ -3,9 +3,8 @@ import Application from "./Application";
 
 describe("Application", () => {
   test("renders correctly", () => {
-    const {container} = render(<Application />);
-    console.log(container)
-    
+    render(<Application />);
+    const headingElement = screen.getByTestId("heading");
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
@@ -20,6 +19,7 @@ describe("Application", () => {
     const submitButtonElement = screen.getByRole("button");
     const nameElementByValue = screen.getByDisplayValue("reda");
 
+    expect(headingElement).toBeInTheDocument();
     expect(nameElement).toBeInTheDocument();
     expect(bioElement).toBeInTheDocument();
     expect(jobLocationElement).toBeInTheDocument();

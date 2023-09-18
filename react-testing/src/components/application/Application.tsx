@@ -4,6 +4,9 @@ const Application = () => {
   return (
     <form>
       <div>
+        <h1 data-testid="heading">Applicant information :</h1>
+      </div>
+      <div>
         <label htmlFor="Name">Name</label>
         <input type="text" id="Name" value="reda" onChange={() => {}} />
       </div>
@@ -12,7 +15,7 @@ const Application = () => {
         <textarea id="Bio" name="Bio" />
       </div>
       <div>
-        <label datatest-id="lol" htmlFor="job-location">Job Location</label>
+        <label htmlFor="job-location">Job Location</label>
         <select id="job-location">
           <option value="">Select a Country</option>
           <option value="US">USA</option>
