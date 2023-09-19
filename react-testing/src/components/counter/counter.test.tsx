@@ -31,18 +31,35 @@ describe("counter", () => {
     await userEvent.click(incrementButton);
     expect(countElement).toHaveTextContent("1");
   });
-});
 
-test("render ten count increments", async () => {
-  render(<Counter />);
-  const incrementButton = screen.getByRole("button", {
-    name: "Increment",
+  test("render ten count increments", async () => {
+    render(<Counter />);
+    const incrementButton = screen.getByRole("button", {
+      name: "Increment",
+    });
+
+    for (let i = 0; i < 10; i++) {
+      await userEvent.click(incrementButton);
+    }
+
+    const countElement = screen.getByRole("heading");
+    expect(countElement).toHaveTextContent("10");
   });
 
-  for (let i = 0; i < 10; i++) {
-    await userEvent.click(incrementButton);
-  }
+  test("render count of 10 after clicking the set button", async () => {
+    render(<Counter />);
+    console.log(userEvent);
+    const amountInput = screen.getByRole("spinbutton");
+    await userEvent.type(amountInput, "10");
+    expect(amountInput).toHaveValue(10);
 
-  const countElement = screen.getByRole("heading");
-  expect(countElement).toHaveTextContent("10");
+    const setButton = screen.getByRole("button", {
+      name: /set/i,
+    });
+
+    await userEvent.click(setButton);
+
+    const countHeading = screen.getByRole("heading");
+    expect(countHeading).toHaveTextContent("10");
+  });
 });
