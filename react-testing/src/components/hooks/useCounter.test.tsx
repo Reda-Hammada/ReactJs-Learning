@@ -26,6 +26,7 @@ describe("useCounter", () => {
     act(() => result.current.increment());
     expect(result.current.count).toBe(1);
   });
+
   test("should decrement count", () => {
     const { result } = renderHook(useCounter, {
       initialProps: {
@@ -34,5 +35,15 @@ describe("useCounter", () => {
     });
     act(() => result.current.decrement());
     expect(result.current.count).toBe(-1);
+  });
+
+  test("should reset count to 0", () => {
+    const { result } = renderHook(useCounter, {
+      initialProps: {
+        initialCount: 100,
+      },
+    });
+    act(() => result.current.reset());
+    expect(result.current.count).toBe(0);
   });
 });
